@@ -40,7 +40,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/style-resources',
     '@nuxtjs/svg'
   ],
 
@@ -50,15 +49,6 @@ export default {
       '@nuxt/content',
     ]
   ],
-
-  styleResources: {
-    scss: [
-      './assets/scss/config/_variables.scss',
-      './assets/scss/config/_maps.scss',
-      './assets/scss/config/_mixins.scss',
-      './assets/scss/*.scss'
-    ]
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
