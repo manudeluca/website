@@ -8,21 +8,23 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'emanueledeluca.it',
+    titleTemplate: 'Emanuele De Luca | Software Developer | %s',
     htmlAttrs: {
-      lang: 'it'
-    },
-    bodyAttrs: {
-      class: 'bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900'
+      lang: 'it',
+      amp: true
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Emanuele De Luca | Software Developer' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ]
+    ],
+    bodyAttrs: {
+      class: 'bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -66,10 +68,5 @@ export default {
         implementation: require('sass')
       }
     }
-  },
-  
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in'
   }
 }

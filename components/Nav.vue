@@ -23,7 +23,7 @@ export default {
     links() {
       return navLinks;
     },
-  },
+  }
 }
 </script>
 

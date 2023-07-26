@@ -9,16 +9,19 @@ export const email = 'emanuele.deluca9@gmail.com';
 export const navLinks = [
   {
     name: 'About',
-    url: '#about'
+    url: '#about',
+    id: 'about',
   },
   {
     name: 'Experience',
-    url: '#experience'
+    url: '#experience',
+    id: 'experience'
   },
-  {
+  /*{
     name: 'Projects',
-    url: '#projects'
-  }
+    url: '#projects',
+    id: 'projects'
+  }*/
 ];
 
 export const socialLinks = [
