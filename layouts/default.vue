@@ -18,10 +18,8 @@ import { navLinks } from '@/store/store.js';
 
 export default {
   created() {
-    if (process.client){
-      window.addEventListener("scroll", this.handleScroll);
-      window.addEventListener("mousemove", this.handleMouseMove);
-    }
+    // window.addEventListener("scroll", this.handleScroll);
+    // window.addEventListener("mousemove", this.handleMouseMove);
   },
   data() {
     return {
@@ -29,38 +27,14 @@ export default {
     }
   },
   mounted() {
-    this.loadData()
-  },  
+    window.addEventListener("scroll", this.handleScroll);
+  },
   computed: {
     links() {
       return navLinks;
     },
   },
   methods: {
-    loadData() {
-      for (let i = 0; i < this.links.length; i++) {
-        let e = document.getElementById(this.links[i].id);
-        let a = document.querySelectorAll('a[href="/' + this.links[i].url + '"]');
-        let element = {}, values = [];
-
-        element.offset = e.offsetTop;
-        element.classes = a[0].classList;
-        values.push(element);
-
-        this.nav.push(element);
-      }
-
-      this.addRemoveClass(this.nav[0]);
-    },
-    addRemoveClass(nav) {
-      for (let i = 0; i < this.nav.length; i ++) {
-        this.nav[i].classes.remove('nuxt-link-exact-active');
-        this.nav[i].classes.remove('nuxt-link-active');
-      }
-
-      nav.classes.add('nuxt-link-exact-active');
-      nav.classes.add('nuxt-link-active');
-    },
     handleMouseMove(e) {
       if (window.innerWidth < 1024) return;
       
@@ -74,27 +48,26 @@ export default {
       cursor[0].style = 'background: radial-gradient(600px at ' + x + 'px ' + y + 'px, rgba(29, 78, 216, 0.15), transparent 80%);';
     },
     handleScroll() {
-      if (process.client){
-        var currentScrollPosition = window.scrollY
+      let mainNavLinks = document.querySelectorAll('.nav > ul > li > a')
 
-        for (let i = 0; i < this.nav.length; i ++) {
-          if (this.nav[i+1] != null) {
-            if (currentScrollPosition >= this.nav[i].offset && currentScrollPosition <= this.nav[i+1].offset) {
-              this.addRemoveClass(this.nav[i]);
-            } 
-          } else {
-            if (currentScrollPosition >= this.nav[i].offset) {
-            this.addRemoveClass(this.nav[i]);
-            }
+      let fromTop = window.scrollY
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector(decodeURIComponent(link.hash))
+        let allCurrent = document.querySelectorAll('.nuxt-link-active'), i
+
+        if (section.offsetTop <= fromTop) {
+          for (i = 0; i < allCurrent.length; ++i) {
+            allCurrent[i].classList.remove('nuxt-link-active')
           }
+          link.classList.add('nuxt-link-active')
+        } else {
+          link.classList.remove('nuxt-link-active')
         }
-      }
+      })
     }, 
   },
   destroyed() {
-    if (process.client){
-       window.removeEventListener("scroll", this.handleScroll);
-    }
+    window.removeEventListener("scroll", this.handleScroll);
   },
 }
 </script>

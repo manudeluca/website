@@ -1,8 +1,9 @@
 ---
 company: Sinapsi Advisor SRL
 role: Web Developer
-description: Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.
+description: Built the frontend and backend of "Finanzimento Facile", software to run a “match” between companies and public competitions. Built the backend of a mobile application for a logistics and transportation company, as well as website and ecommerce implementations.
 years: June 2020 - Febraury 2021
-languages: PHP
+languages: PHP◙JavaScript◙jQuery◙HTML◙CSS◙WordPress◙MySQL
+website: https://it.linkedin.com/company/sinapsi-advisor
 order: 2
 ---

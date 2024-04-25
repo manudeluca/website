@@ -1,8 +1,9 @@
 ---
 company: Mazer SRL
 role: Full-Stack Developer
-description: Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.
+description: Build and maintain components of Laila, a chat bot. Specifically, a customer-facing CRM to see Laila's performance, the chat bot widget, integrative plugins (for platforms such as WordPres, PrestaShop and OpenCart) and mobile application development.
 years: May 2021 - September 2022
-languages: PHP,VueJS
+languages: PHP◙Laravel◙VueJS◙TypeScript◙P-React◙WebSocket◙SOLR◙MySQL◙Docker◙AWS◙Git◙GitHub
+website: https://www.laila.tech/
 order: 4
 ---

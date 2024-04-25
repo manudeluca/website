@@ -1,8 +1,9 @@
 ---
 company: Evolution Digital Business SRL
 role: Web Developer
-description: Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.
+description: Build and maintain various CRMs for clients. For transportation and logistics company, automated Instagram services, cash management, contact management, appointments with Telegram notification and quiz simulator.
 years: June 2018 - May 2020
-languages: PHP
+languages: PHP◙JavaScript◙jQuery◙HTML◙CSS◙MySQL◙SQLite
+website: https://www.edb.srl/
 order: 1
 ---

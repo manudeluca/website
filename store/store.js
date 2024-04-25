@@ -17,11 +17,11 @@ export const navLinks = [
     url: '#experience',
     id: 'experience'
   },
-  /*{
+  {
     name: 'Projects',
     url: '#projects',
     id: 'projects'
-  }*/
+  }
 ];
 
 export const socialLinks = [

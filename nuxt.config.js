@@ -10,7 +10,7 @@ export default {
     title: 'emanueledeluca.it',
     titleTemplate: 'Emanuele De Luca | Software Developer | %s',
     htmlAttrs: {
-      lang: 'it',
+      lang: 'en',
       amp: true
     },
     meta: [
